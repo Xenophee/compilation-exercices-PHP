@@ -1,0 +1,17 @@
+/* ========================================================================================================================= */
+/* ------------------------------------------------------------------------------------------------------------------------- */
+/* BOUTONS */
+
+.btn {
+    background-color: var(--first-color);
+    color: var(--third-color);
+    border: var(--third-border-solid);
+    font-size: 1.2rem;
+    transition: 1s;
+}
+
+.btn:hover {
+    background-color: var(--fourth-color);
+    color: var(--first-color);
+    border: var(--first-border-solid);
+}

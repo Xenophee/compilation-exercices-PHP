@@ -1,0 +1,99 @@
+/* ========================================================================================================================= */
+/* ------------------------------------------------------------------------------------------------------------------------- */
+/* FORMULAIRE */
+
+.title-form {
+    background-color: var(--first-color);
+    color: var(--third-color);
+    border: var(--third-border-solid);
+}
+
+legend {
+    border-bottom: var(--first-border-solid);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.form {
+    background-color: var(--second-color);
+    border: var(--first-border-solid);
+}
+
+.bloc-input {
+    width: 100%;
+}
+
+.bloc-double-input {
+    width: 100%;
+}
+
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* SPÉCIFIQUE */
+
+
+.form-control, .form-select {
+    box-shadow: inset 0 0 10px #cab8e1;
+    border: var(--first-border-solid);
+    height: 55px;
+}
+
+.form-control:focus, .form-select:focus {
+    border: var(--third-border-solid);
+    box-shadow: none;
+}
+
+option {
+    color: black;
+}
+
+.form-check-input {
+    border: var(--border-special-solid);
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0;
+}
+
+.form-check-input:checked {
+    background-color: var(--third-color);
+    box-shadow: #cab8e1 0 0 4px;
+    border: var(--first-border-solid);
+}
+
+.form-check-input:focus {
+    box-shadow: #cab8e1 0 0 4px;
+    border: var(--first-border-solid);
+}
+
+#programmingExperience {
+    height: 300px;
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 1200px)  {
+
+    .bloc-double-input {
+        width: 48%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .bloc-input {
+        width: 50%;
+    }
+    
+    .bloc-double-input {
+        width: 40%;
+    }
+}
+
+

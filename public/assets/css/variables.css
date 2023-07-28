@@ -1,0 +1,27 @@
+:root {
+
+    --special-font: 'Russo One', sans-serif;
+    --main-font: 'Chakra Petch', sans-serif;
+
+    --first-color: #f3eff8;
+    --second-color: #ab8ecd;
+    --third-color: #8b6dbc;
+    --fourth-color: #cab8e1;
+
+    --first-filter-color: #f3eff89a;
+    --second-filter-color: #8b6dbc44;
+
+    --first-border-solid: #f3eff8 2px solid;
+    --first-border-strong-solid: #f3eff8 7px solid;
+    --second-border-medium-solid: #ab8ecd 3px solid;
+    --second-border-strong-double: #ab8ecd 7px double;
+
+    --third-border-solid: #8b6dbc 2px solid;
+    --third-border-medium-solid: #8b6dbc 5px solid;
+
+    --fourth-border-solid: #cab8e1 2px solid;
+
+    --background: url(../img/background.jpg);
+
+    --box-shadow: 30px -16px var(--third-color);
+}

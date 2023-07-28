@@ -1,0 +1,47 @@
+/* ========================================================================================================================= */
+/* ------------------------------------------------------------------------------------------------------------------------- */
+/* HOME */
+
+.container-index {
+    width: 100%;
+    height: 80vh;
+}
+
+.background-index {
+    background-color: var(--first-filter-color);
+    width: 70%;
+    min-height: 55vh;
+}
+
+.index {
+    width: 70%;
+    background-color: var(--first-color);
+    border: var(--second-border-strong-double);
+}
+
+#indexTitle {
+    background-color: var(--second-color);
+}
+
+.index p {
+    color: var(--second-color);
+}
+
+
+
+/* ========================================================================================================================= */
+/* ------------------------------------------------------------------------------------------------------------------------- */
+/* RESPONSIVE */
+
+@media screen and (min-width: 768px) {
+    .background-index {
+        min-height: 50vh;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .background-index {
+        min-height: 70vh;
+    }
+}

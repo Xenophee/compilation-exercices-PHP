@@ -1,0 +1,58 @@
+/* ========================================================================================================================= */
+/* ------------------------------------------------------------------------------------------------------------------------- */
+/* NAVIGATION */
+
+nav {
+    background-color: var(--first-color);
+    border-bottom: var(--third-border-medium-solid);
+}
+
+.navbar-brand {
+    color: var(--third-color);
+    font-family: var(--special-font);
+    transition: 1s;
+}
+
+.navbar-brand:hover {
+    color: var(--fourth-color);
+}
+
+.nav-link {
+    position: relative; 
+    color: var(--third-color);
+    transition: 1s;
+}
+
+.nav-link.active { 
+    color: var(--fourth-color) !important;
+}
+
+.nav-link:hover {
+    color: var(--fourth-color);
+}
+
+.nav-link.active::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    border-bottom: var(--fourth-border-solid);
+    transition: 1s;
+}
+
+.nav-link::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 5px;
+    width: 0%;
+    border-bottom: var(--fourth-border-solid);
+    transform: scaleX(0);
+    transition: 1s;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+    width: 100%;
+}

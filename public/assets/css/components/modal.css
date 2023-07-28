@@ -1,0 +1,23 @@
+
+/* ========================================================================================================================= */
+/* ------------------------------------------------------------------------------------------------------------------------- */
+/* MODALS */
+
+dialog {
+    background-color: var(--second-color);
+}
+
+dialog::backdrop {
+    background-color: #2c2c2caf;
+}
+
+
+dialog::-webkit-scrollbar {
+    width: 0.7em;
+    background-color: var(--first-color);
+}
+
+dialog::-webkit-scrollbar-thumb {
+    background-color: var(--fourth-color);
+    border: var(--first-border-solid);
+}
