@@ -104,13 +104,14 @@ try {
         if (empty($birthdate)) {
             $error['birthdate'] = 'Date de naissance non renseignée.';
         } else {
-            $validDate = filter_var($birthdate, FILTER_VALIDATE_REGEXP, ['options' => ['regexp' => '/' . REGEX_DATE . '/']]);
+            // On peut utiliser une regex pour vérifier le format ou utiliser la méthode statique de l'objet DateTime qui va créer un objet en cas de conformité
+            $validDate = DateTime::createFromFormat('Y-m-d', $birthdate);
 
             if (!$validDate) {
                 $error['birthdate'] = 'Date de naissance non valide.';
             } else {
                 // Calcul de l'age de l'utilisateur (année courante - année de naissance)
-                $age = date('Y') - date('Y', strtotime($validDate));
+                $age = date('Y') - $validDate->format('Y');
 
                 if ($age > 120 || $age < 0) {
                     $error['birthdate'] = 'Votre age n\'est pas conforme.';

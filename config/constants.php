@@ -22,7 +22,6 @@ define('LANGUAGES', ['HTML/CSS', 'PHP', 'Javascript', 'Python', 'Autres']);
 
 // Création de constantes contenant les REGEX utiles et le format d'image autorisé
 define('REGEX_NAME',"^[A-Za-z-éèêëàâäôöûüç' ]+$");
-define('REGEX_DATE','^([0-9]{4})[\/\-]?([0-9]{2})[\/\-]?([0-9]{2})$');
 define('REGEX_ZIPCODE','^[0-9]{5}$');
 define('REGEX_LINKEDIN','^(http(s)?:\/\/)?([\w]+\.)?linkedin\.com\/(pub|in|profile)');
 
