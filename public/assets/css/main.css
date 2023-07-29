@@ -20,7 +20,6 @@
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* IMPORT POUR LES PAGES */
 
-@import url('./pages/form.css');
 @import url('./pages/home.css');
 
 
@@ -62,3 +61,5 @@ main {
     background-color: var(--second-color);
     border: var(--first-border-solid);
 }
+
+

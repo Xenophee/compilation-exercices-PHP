@@ -18,7 +18,6 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-
 .form {
     background-color: var(--second-color);
     border: var(--first-border-solid);
@@ -30,6 +29,12 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .bloc-double-input {
     width: 100%;
+}
+
+.imgProfile {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
 
 
@@ -71,11 +76,13 @@ option {
     border: var(--first-border-solid);
 }
 
-#programmingExperience {
+#experience {
     height: 300px;
 }
 
-
+.error-field {
+    border: rgb(151, 29, 29) 2px solid;
+}
 
 
 @media (min-width: 768px) and (max-width: 1200px)  {

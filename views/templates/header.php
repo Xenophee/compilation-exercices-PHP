@@ -31,6 +31,12 @@
                         <li class="nav-item mx-5">
                             <a class="nav-link disabled fs-5" href="">Calendrier</a>
                         </li>
+                        <li class="nav-item mx-5">
+                            <a class="nav-link disabled fs-5" href="">BDD</a>
+                        </li>
+                        <li class="nav-item mx-5">
+                            <a class="nav-link disabled fs-5" href="">CRUD</a>
+                        </li>
                     </ul>
                 </div>
             </div>

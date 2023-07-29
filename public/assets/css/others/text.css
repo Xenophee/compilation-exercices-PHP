@@ -10,3 +10,7 @@ h1 {
 h1, h2, legend {
     font-family: var(--special-font);
 }
+
+.text-danger {
+    color: rgb(151, 29, 29) !important;
+}
