@@ -9,12 +9,12 @@
 
 .background-index {
     background-color: var(--first-filter-color);
-    width: 70%;
+    width: 90%;
     min-height: 55vh;
 }
 
 .index {
-    width: 70%;
+    width: 85%;
     background-color: var(--first-color);
     border: var(--second-border-strong-double);
 }
@@ -43,5 +43,10 @@
 @media screen and (min-width: 1200px) {
     .background-index {
         min-height: 70vh;
+        width: 70%;
+    }
+
+    .index {
+        width: 70%;
     }
 }
