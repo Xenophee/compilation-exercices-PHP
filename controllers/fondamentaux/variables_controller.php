@@ -6,7 +6,7 @@
 
 try {
 
-    
+    $js = '../../public/assets/js/script_fondamentaux.js';
 
 } catch (\Throwable $th) {
     include_once(__DIR__ . '/../views/templates/header.php');
