@@ -1,4 +1,9 @@
 <main>
+
+    <!-- ==================================================================================================================================== -->
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+    <!-- PARTIE ÉNONCÉ DE L'EXERCICE -->
+
     <section>
         <div class="container-fluid main-container shadow-lg py-3 py-md-5 px-md-5 mb-5">
             <h1 class="text-center shadow py-3 mb-5">Formulaire</h1>
@@ -36,11 +41,15 @@
 
     <?php if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($error)) { ?>
 
+        <!-- ==================================================================================================================================== -->
+        <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+        <!-- PARTIE AFFICHAGE DES DONNÉES -->
+
         <section>
             <div class="container-fluid main-container shadow-lg py-3 py-md-5 px-md-5 mb-5">
                 <div class="row">
                     <div class="col form">
-                        <ul class="d-flex flex-column justify-content-center align-items-center py-5">
+                        <ul class="d-flex flex-column justify-content-center align-items-md-center py-5">
                             <?php if (isset($fileName)) { ?>
                                 <li class="d-flex flex-column align-items-center"><strong>Photo de profil : </strong>
                                     <img src="/public/uploads/<?= $fileName ?>" class="imgProfile img-fluid my-4">
@@ -48,7 +57,7 @@
                             <?php } ?>
 
                             <li><strong>Nom : </strong><?= $validLastname ?></li>
-                            <li><strong>Date de naissance : </strong><?= date('d/m/Y', strtotime($validDate)) ?></li>
+                            <li><strong>Date de naissance : </strong><?= $validDate->format('d/m/Y') ?></li>
                             <li><strong>Pays de naissance : </strong><?= COUNTRIES[$birthLand - 1] ?></li>
                             <li><strong>Code postal : </strong><?= $validZipCode ?></li>
 
@@ -78,13 +87,17 @@
 
     <?php } else { ?>
 
+        <!-- ==================================================================================================================================== -->
+        <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+        <!-- PARTIE FORMULAIRE -->
+
         <section>
             <div class="container-fluid main-container shadow-lg py-3 py-md-5 px-md-5 mb-5">
-                <h2 class="text-center title-form py-5 mb-5">S'enregistrer</h2>
+                <h2 class="text-center title-result py-5 mb-5">S'enregistrer</h2>
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-10">
                         <form method="POST" enctype="multipart/form-data" id="signIn" novalidate>
-                            
+
                             <!-- ================================================================================================================================ -->
                             <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
                             <!-- §§ PREMIER BLOC §§ -->
