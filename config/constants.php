@@ -28,3 +28,7 @@ define('REGEX_LINKEDIN','^(http(s)?:\/\/)?([\w]+\.)?linkedin\.com\/(pub|in|profi
 define('AUTHORIZED_IMAGE_FORMAT', ['image/jpeg', 'image/png']);
 
 // -----------------------------------------------------------------------------------------------------------------------
+
+
+
+define('FONDAMENTAUX', ['Variables', 'Conditions', 'Boucles', 'Fonctions', 'Tableaux', 'Dates']);

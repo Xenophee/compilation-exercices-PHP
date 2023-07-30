@@ -21,24 +21,12 @@
                 </button>
                 <div class="row collapse navbar-collapse ps-3" id="navbarNav">
                     <ul class="navbar-nav mt-4 mt-md-0">
-                        <li class="nav-item mx-xl-auto">
-                            <a class="nav-link fs-5" aria-current="page" href="../../controllers/fondamentaux/variables_controller.php">Variables</a>
-                        </li>
-                        <li class="nav-item mx-xl-auto">
-                            <a class="nav-link disabled fs-5" href="../../controllers/fondamentaux/conditions_controller.php">Conditions</a>
-                        </li>
-                        <li class="nav-item mx-xl-auto">
-                            <a class="nav-link disabled fs-5" href="../../controllers/fondamentaux/boucles_controller.php">Boucles</a>
-                        </li>
-                        <li class="nav-item mx-xl-auto">
-                            <a class="nav-link disabled fs-5" href="../../controllers/fondamentaux/fonctions_controller.php">Fonctions</a>
-                        </li>
-                        <li class="nav-item mx-xl-auto">
-                            <a class="nav-link disabled fs-5" href="../../controllers/fondamentaux/tableaux_controller.php">Tableaux</a>
-                        </li>
-                        <li class="nav-item mx-xl-auto">
-                            <a class="nav-link disabled fs-5" href="../../controllers/fondamentaux/dates_controller.php">Dates</a>
-                        </li>
+                        <?php
+                        foreach (FONDAMENTAUX as $key => $value) { ?>
+                            <li class="nav-item mx-xl-auto">
+                                <a class="nav-link fs-5 <?= isActivePage($key, $id) ?>" aria-current="page" href="../../controllers/fondamentaux_controller.php?id=<?= $key ?>"><?= $value ?></a>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>

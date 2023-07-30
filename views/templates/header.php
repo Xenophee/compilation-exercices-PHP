@@ -23,19 +23,19 @@
                 <div class="row collapse navbar-collapse ps-3" id="navbarNav">
                     <ul class="navbar-nav mt-4 mt-md-0">
                         <li class="nav-item mx-5">
-                            <a class="nav-link fs-5" aria-current="page" href="../../controllers/fondamentaux/variables_controller.php">Fondamentaux</a>
+                            <a class="nav-link fs-5" aria-current="page" href="../../controllers/fondamentaux_controller.php?id=0">Fondamentaux</a>
                         </li>
                         <li class="nav-item mx-5">
-                            <a class="nav-link fs-5" href="../../controllers/form_controller.php">Formulaire</a>
+                            <a class="nav-link fs-5 <?= isActivePage(1, $currentPage) ?>" href="../../controllers/form_controller.php">Formulaire</a>
                         </li>
                         <li class="nav-item mx-5">
-                            <a class="nav-link disabled fs-5" href="">Calendrier</a>
+                            <a class="nav-link disabled fs-5 <?= isActivePage(2, $currentPage) ?>" href="">Calendrier</a>
                         </li>
                         <li class="nav-item mx-5">
-                            <a class="nav-link disabled fs-5" href="">BDD</a>
+                            <a class="nav-link disabled fs-5 <?= isActivePage(3, $currentPage) ?>" href="">BDD</a>
                         </li>
                         <li class="nav-item mx-5">
-                            <a class="nav-link disabled fs-5" href="">CRUD</a>
+                            <a class="nav-link disabled fs-5 <?= isActivePage(4, $currentPage) ?>" href="">CRUD</a>
                         </li>
                     </ul>
                 </div>

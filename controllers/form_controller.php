@@ -2,13 +2,16 @@
 
 
 
-require_once(__DIR__ . '/../config/constants.php');
+require_once(__DIR__ . './../config/init.php');
 
 
 // ===================================================================================================================
 // -------------------------------------------------------------------------------------------------------------------
 
 try {
+
+    $document = 'Formulaire';
+    $currentPage = 1;
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -202,9 +205,9 @@ try {
     }
 
 } catch (\Throwable $th) {
-    include_once(__DIR__ . '/../views/templates/header.php');
-    include_once(__DIR__ . '/../views/error.php');
-    include_once(__DIR__ . '/../views/templates/footer.php');
+    include_once(__DIR__ . './../views/templates/header.php');
+    include_once(__DIR__ . './../views/error.php');
+    include_once(__DIR__ . './../views/templates/footer.php');
     die;
 }
 
@@ -216,8 +219,8 @@ try {
 // -------------------------------------------------------------------------------------------------------------------
 // AFFICHAGE DES VUES
 
-include_once(__DIR__ . '/../views/templates/header.php');
+include_once(__DIR__ . './../views/templates/header.php');
 
-include(__DIR__ . '/../views/form.php');
+include(__DIR__ . './../views/form.php');
 
-include_once(__DIR__ . '/../views/templates/footer.php');
+include_once(__DIR__ . './../views/templates/footer.php');
