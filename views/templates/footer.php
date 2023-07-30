@@ -1,5 +1,5 @@
     <script src="../../public/assets/js/bootstrap.min.js"></script>
-    <script src="../../public/assets/js/script.js"></script>
+    <script src="<?= $js ?? '' ?>"></script>
     </body>
 
 </html>
