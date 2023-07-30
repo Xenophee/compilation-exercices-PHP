@@ -18,6 +18,22 @@
     border: var(--first-border-strong-solid);
 }
 
+.title-result {
+    background-color: var(--first-color);
+    color: var(--third-color);
+    border: var(--third-border-solid);
+}
+
+.result-exo {
+    background-color: var(--first-color);
+    color: var(--third-color) !important;
+    border: var(--third-border-medium-solid);
+}
+
+.result-exo h2, .result-exo .result, .result-text {
+    color: var(--third-color);
+}
+
 article {
     height: 100%;
 }

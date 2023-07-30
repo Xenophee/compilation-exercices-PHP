@@ -2,11 +2,7 @@
 /* ------------------------------------------------------------------------------------------------------------------------- */
 /* FORMULAIRE */
 
-.title-form {
-    background-color: var(--first-color);
-    color: var(--third-color);
-    border: var(--third-border-solid);
-}
+
 
 legend {
     border-bottom: var(--first-border-solid);

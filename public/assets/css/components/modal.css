@@ -8,7 +8,7 @@ dialog {
 }
 
 dialog::backdrop {
-    background-color: #2c2c2caf;
+    background-color: #f3eff896;
 }
 
 
@@ -20,4 +20,15 @@ dialog::-webkit-scrollbar {
 dialog::-webkit-scrollbar-thumb {
     background-color: var(--fourth-color);
     border: var(--first-border-solid);
+}
+
+
+/* ========================================================================================================================= */
+/* ------------------------------------------------------------------------------------------------------------------------- */
+/* RESPONSIVE */
+
+@media screen and (min-width: 1200px) {
+    dialog {
+        max-width: 60vw;
+    }
 }

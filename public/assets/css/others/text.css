@@ -2,6 +2,12 @@
 /* ------------------------------------------------------------------------------------------------------------------------- */
 /* TEXTES */
 
+* {
+    font-family: var(--main-font);
+    font-size: 1.1rem;
+    color: var(--first-color);
+}
+
 h1 {
     background-color: var(--third-color);
     border: var(--second-border-medium-solid);
