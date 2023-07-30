@@ -31,4 +31,6 @@ define('AUTHORIZED_IMAGE_FORMAT', ['image/jpeg', 'image/png']);
 
 
 
-define('FONDAMENTAUX', ['Variables', 'Conditions', 'Boucles', 'Fonctions', 'Tableaux', 'Dates']);
+define('FONDAMENTAUX', ['Variables', 'Conditions', 'Boucles', 'Fonctions', 'Tableaux', 'Dates', 'Paramètres d\'URL', 'Formulaires', 'Superglobales']);
+
+define('FONDAMENTAUX_URL', ['variables', 'conditions', 'boucles', 'fonctions', 'tableaux', 'dates', 'param_url', 'formulaires', 'superglobales']);

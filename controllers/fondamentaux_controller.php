@@ -27,6 +27,6 @@ try {
 
 include_once(__DIR__ . './../views/templates/header_fondamentaux.php');
 
-include(__DIR__ . './../views/fondamentaux/' . FONDAMENTAUX[$id] . '.php');
+include(__DIR__ . './../views/fondamentaux/' . FONDAMENTAUX_URL[$id] . '.php');
 
 include_once(__DIR__ . './../views/templates/footer.php');

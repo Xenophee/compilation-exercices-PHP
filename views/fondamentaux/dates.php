@@ -186,8 +186,23 @@
                 <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg mx-md-3 mx-xxl-5 my-2 my-md-5">
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 1</h2>
-                        <div class="result d-flex justify-content-center">
+                        <div class="result d-flex flex-column align-items-center">
+                            <?php
+                            // d affiche le jour avec 2 chiffres
+                            // m affiche le jour avec 2 chiffres
+                            // Y affiche l'année avec 4 chiffres
 
+                            $dayDate = date('d/m/Y');
+
+                            // Si on ajoute l'heure dans la date cela indique l'heure du serveur donc si le serveur n'est pas à l'heure on ne sera pas à l'heure
+                            // Pour savoir si notre serveur est à l'heure taper date dans le terminal en ligne de commande
+
+                            // En orientée objet :
+                            $objDate = new DateTime();
+                            ?>
+
+                            <p class="result-text"><?= $dayDate ?></p>
+                            <p class="result-text"><?= $objDate->format('d/m/Y'); ?></p>
                         </div>
                     </article>
                 </div>
@@ -198,8 +213,16 @@
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 2</h2>
 
-                        <div class="result d-flex justify-content-center">
+                        <div class="result d-flex flex-column align-items-center">
+                            <?php
+                            $dayDate = date('d-m-Y');
 
+                            // En orientée objet :
+                            $objDate = new DateTime();
+                            ?>
+
+                            <p class="result-text"><?= $dayDate ?></p>
+                            <p class="result-text"><?= $objDate->format('d-m-Y'); ?></p>
                         </div>
                     </article>
                 </div>
@@ -210,8 +233,18 @@
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 3</h2>
 
-                        <div class="result d-flex justify-content-center">
+                        <div class="result d-flex flex-column justify-content-center">
+                            <?php
+                            $dayDate = date('l j F Y', strtotime('2016-08-07'));
 
+                            // Pour la date en français en orientée objet :
+                            $objDate = new DateTime('2016-08-07');
+                            $formatter = new IntlDateFormatter('fr_FR', IntlDateFormatter::FULL, IntlDateFormatter::NONE);
+                            $frenchDate = $formatter->format($objDate);
+                            ?>
+
+                            <p class="result-text"><?= $dayDate ?></p>
+                            <p class="result-text"><?= $frenchDate ?></p>
                         </div>
                     </article>
                 </div>
@@ -222,8 +255,24 @@
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 4</h2>
 
-                        <div class="result d-flex justify-content-center">
+                        <div class="result">
+                            <?php
+                            // timestamp = nmbre de seconde qui se sont ecoulées depuis le 1 janvier 1970
+                            // L'avantage du timestamp est que c'est un nombre donc plus pratique à utiliser pour faire certaines opérations mathématiques
 
+                            $t = time();
+                            $t1 = mktime(15, 0, 0, 8, 2, 2016);
+                            $t2 = strtotime('2016-08-02 15:00');
+
+                            // En version objet
+                            $objDate = new DateTime('2016-08-02 15:00');
+                            $t3 = $objDate->getTimestamp();
+                            ?>
+
+                            <p class="result-text">Le timestamp du jour est : <?= $t ?></p>
+                            <p class="result-text">Le timestamp du mardi 2 août 2016 à 15h00 est : <?= $t1 ?></p>
+                            <p class="result-text">Le timestamp avec strtotime du mardi 2 août 2016 à 15h00 est : <?= $t2 ?></p>
+                            <p class="result-text">Le timestamp avec la class datetime du mardi 2 août 2016 à 15h00 est : <?= $t3 ?></p>
                         </div>
                     </article>
                 </div>
@@ -234,8 +283,25 @@
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 5</h2>
 
-                        <div class="result d-flex justify-content-center">
+                        <div class="result">
+                            <?php
+                            // Méthode 1
+                            $date1 = '16-05-2016';
+                            $date2 = time();
+                            $date3 = strtotime($date1);
 
+                            $nbDaysTimestamp = $date2 - $date3;
+                            // On divise par le nombre de secondes dans une journée, soit 86400
+                            $nbDays = $nbDaysTimestamp / 86400;
+
+                            // Méthode 2 en utilisant l'orientée objet
+                            $objStartDate = new DateTime('2016-05-16');
+                            $objEndDate = new DateTime();
+                            $objDiff = $objStartDate->diff($objEndDate);
+                            ?>
+
+                            <p class="result-text">Le timestamp du jour est : <?= $nbDays ?></p>
+                            <p class="result-text">Le timestamp du mardi 2 août 2016 à 15h00 est : <?= $objDiff->days ?></p>
                         </div>
                     </article>
                 </div>
@@ -246,8 +312,12 @@
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 6</h2>
 
-                        <div class="result d-flex justify-content-center">
+                        <div class="result">
+                            <?php
+                            $nbDays = cal_days_in_month(CAL_GREGORIAN, 2, 2016);
+                            ?>
 
+                            <p class="result-text">Nombre de jours en février 2016 : <?= $nbDays ?></p>
                         </div>
                     </article>
                 </div>
@@ -258,8 +328,15 @@
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 7</h2>
 
-                        <div class="result d-flex justify-content-center">
+                        <div class="result">
+                            <?php
+                            $objToday = new DateTime();
+                            $obj20Days = new DateInterval('P20D');
+                            $objToday->add($obj20Days);
+                            ?>
 
+                            <p class="result-text">Date du jour + 20 jours avec la fonction date : <?= date('d.m.Y', strtotime(' + 20 days')); ?></p>
+                            <p class="result-text">Date du jour + 20 jours avec la class datetime : <?= $objToday->format('d.m.Y') ?></p>
                         </div>
                     </article>
                 </div>
@@ -270,8 +347,15 @@
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 8</h2>
 
-                        <div class="result d-flex flex-column align-items-center">
+                        <div class="result">
+                            <?php
+                            $objToday = new DateTime();
+                            $obj22Days = new DateInterval('P22D');
+                            $objToday->sub($obj22Days);
+                            ?>
 
+                            <p class="result-text">Date du jour -22 jours avec la fonction date : <?= date('d.m.Y', strtotime(' - 22 days')); ?></p>
+                            <p class="result-text">Date du jour - 22 jours avec la class datetime : <?= $objToday->format('d.m.Y') ?></p>
                         </div>
                     </article>
                 </div>
