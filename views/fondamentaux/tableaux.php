@@ -219,11 +219,13 @@
             <div class="row justify-content-around pt-md-5">
                 <!-- =============================================================================================================== -->
                 <!-- Exercice 1 -->
-                <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg mx-md-3 mx-xxl-5 my-2 my-md-5">
+                <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg d-none mx-md-3 mx-xxl-5 my-2 my-md-5">
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 1</h2>
                         <div class="result d-flex justify-content-center">
-
+                            <?php
+                            $arrMonths = array('janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre');
+                            ?>
                         </div>
                     </article>
                 </div>
@@ -235,7 +237,7 @@
                         <h2 class="text-center py-3 mb-4">Exercice 2</h2>
 
                         <div class="result d-flex justify-content-center">
-
+                            <?= $arrMonths[2] ?>
                         </div>
                     </article>
                 </div>
@@ -247,7 +249,7 @@
                         <h2 class="text-center py-3 mb-4">Exercice 3</h2>
 
                         <div class="result d-flex justify-content-center">
-
+                            <?= $arrMonths[5] ?>
                         </div>
                     </article>
                 </div>
@@ -259,19 +261,28 @@
                         <h2 class="text-center py-3 mb-4">Exercice 4</h2>
 
                         <div class="result d-flex justify-content-center">
-
+                            <?php $arrMonths[7] = 'aout'; ?>
+                            <?= $arrMonths[7] ?>
                         </div>
                     </article>
                 </div>
 
                 <!-- =============================================================================================================== -->
                 <!-- Exercice 5 -->
-                <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg mx-md-3 mx-xxl-5 my-2 my-md-5">
+                <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg d-none mx-md-3 mx-xxl-5 my-2 my-md-5">
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 5</h2>
 
                         <div class="result d-flex justify-content-center">
-
+                            <?php
+                            $arrDepartment = array(
+                                '02' => 'Aisne',
+                                '59' => 'Nord',
+                                '60' => 'Oise',
+                                '62' => 'Pas-de-Calais',
+                                '80' => 'Somme'
+                            );
+                            ?>
                         </div>
                     </article>
                 </div>
@@ -283,19 +294,28 @@
                         <h2 class="text-center py-3 mb-4">Exercice 6</h2>
 
                         <div class="result d-flex justify-content-center">
-
+                            <p class="result-text">Le département qui a pour index 59 est le département : <?= $arrDepartment['59'] ?></p>
                         </div>
                     </article>
                 </div>
 
                 <!-- =============================================================================================================== -->
                 <!-- Exercice 7 -->
-                <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg mx-md-3 mx-xxl-5 my-2 my-md-5">
+                <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg d-none mx-md-3 mx-xxl-5 my-2 my-md-5">
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 7</h2>
 
                         <div class="result d-flex justify-content-center">
+                            <?php
+                            $arrDepartment['51'] = 'Marne';
 
+                            // *************************************************************************************
+                            // Une autre manière d'ajouter des éléments à la fin d'un tableau existant : array_push
+                            // Exemple avec un tableau des jours de la semaine
+                            $week = array('lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi');
+                            array_push($week, 'dimanche');
+                            // *************************************************************************************
+                            ?>
                         </div>
                     </article>
                 </div>
@@ -307,7 +327,12 @@
                         <h2 class="text-center py-3 mb-4">Exercice 8</h2>
 
                         <div class="result d-flex flex-column align-items-center">
-
+                            <ul>
+                                <?php
+                                foreach ($arrMonths as $monthName) { ?>
+                                    <li class="result-text"><?= $monthName ?></li>
+                                <?php } ?>
+                            </ul>
                         </div>
                     </article>
                 </div>
@@ -319,7 +344,12 @@
                         <h2 class="text-center py-3 mb-4">Exercice 9</h2>
 
                         <div class="result d-flex flex-column align-items-center">
-
+                            <ul>
+                                <?php
+                                foreach ($arrDepartment as $department) { ?>
+                                    <li class="result-text"><?= $department ?></li>
+                                <?php } ?>
+                            </ul>
                         </div>
                     </article>
                 </div>
@@ -331,7 +361,12 @@
                         <h2 class="text-center py-3 mb-4">Exercice 10</h2>
 
                         <div class="result d-flex flex-column align-items-center">
-
+                            <ul>
+                                <?php
+                                foreach ($arrDepartment as $key => $department) { ?>
+                                    <li class="result-text">Le département "<?= $department ?>" a le numéro <?= $key ?> </li>
+                                <?php } ?>
+                            </ul>
                         </div>
                     </article>
                 </div>

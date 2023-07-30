@@ -19,7 +19,7 @@
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <dialog><img src="../../public/assets/img/fondamentaux/fonctions/1.png" class="img-fluid" alt="Code de l'exercice 1"></dialog>
+                            <dialog><img src="../../public/assets/img/fondamentaux/dates/1.png" class="img-fluid" alt="Code de l'exercice 1"></dialog>
                             <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
                                 code</button>
                         </div>
@@ -38,7 +38,7 @@
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <dialog><img src="../../public/assets/img/fondamentaux/fonctions/2.png" class="img-fluid" alt="Code de l'exercice 2"></dialog>
+                            <dialog><img src="../../public/assets/img/fondamentaux/dates/2.png" class="img-fluid" alt="Code de l'exercice 2"></dialog>
                             <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
                                 code</button>
                         </div>
@@ -58,7 +58,7 @@
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <dialog><img src="../../public/assets/img/fondamentaux/fonctions/3.png" class="img-fluid" alt="Code de l'exercice 3"></dialog>
+                            <dialog><img src="../../public/assets/img/fondamentaux/dates/3.png" class="img-fluid" alt="Code de l'exercice 3"></dialog>
                             <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
                                 code</button>
                         </div>
@@ -78,7 +78,7 @@
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <dialog><img src="../../public/assets/img/fondamentaux/fonctions/4.png" class="img-fluid" alt="Code de l'exercice 4"></dialog>
+                            <dialog><img src="../../public/assets/img/fondamentaux/dates/4.png" class="img-fluid" alt="Code de l'exercice 4"></dialog>
                             <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
                                 code</button>
                         </div>
@@ -97,7 +97,7 @@
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <dialog><img src="../../public/assets/img/fondamentaux/fonctions/5.png" class="img-fluid" alt="Code de l'exercice 5"></dialog>
+                            <dialog><img src="../../public/assets/img/fondamentaux/dates/5.png" class="img-fluid" alt="Code de l'exercice 5"></dialog>
                             <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
                                 code</button>
                         </div>
@@ -116,7 +116,7 @@
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <dialog><img src="../../public/assets/img/fondamentaux/fonctions/6.png" class="img-fluid" alt="Code de l'exercice 6"></dialog>
+                            <dialog><img src="../../public/assets/img/fondamentaux/dates/6.png" class="img-fluid" alt="Code de l'exercice 6"></dialog>
                             <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
                                 code</button>
                         </div>
@@ -135,7 +135,7 @@
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <dialog><img src="../../public/assets/img/fondamentaux/fonctions/7.png" class="img-fluid" alt="Code de l'exercice 7"></dialog>
+                            <dialog><img src="../../public/assets/img/fondamentaux/dates/7.png" class="img-fluid" alt="Code de l'exercice 7"></dialog>
                             <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
                                 code</button>
                         </div>
@@ -154,7 +154,7 @@
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <dialog><img src="../../public/assets/img/fondamentaux/fonctions/8.png" class="img-fluid" alt="Code de l'exercice 8"></dialog>
+                            <dialog><img src="../../public/assets/img/fondamentaux/dates/8.png" class="img-fluid" alt="Code de l'exercice 8"></dialog>
                             <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
                                 code</button>
                         </div>

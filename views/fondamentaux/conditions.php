@@ -149,26 +149,6 @@
                     </article>
                 </div>
 
-                <!-- =============================================================================================================== -->
-                <!-- Exercice 8 -->
-                <div class="col-12 col-md-10 col-xl-5 col-xxl-3 exo mx-md-3 mx-xxl-5 my-2 my-md-5">
-                    <article class="d-flex flex-column justify-content-between py-3 px-1 py-md-4 px-md-4">
-                        <h2 class="text-center py-3 mb-4">Exercice 8</h2>
-
-                        <div class="text">
-                            <p>Traduire ce code avec des if et des else :</p>
-                            <div class="code px-2 py-2">
-                                <code>echo ($isOk) ? 'c'est ok !!' : 'c'est pas bon !!!'; </code>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <dialog><img src="../../public/assets/img/fondamentaux/conditions/8.png" class="img-fluid" alt="Code de l'exercice 8"></dialog>
-                            <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
-                                code</button>
-                        </div>
-                    </article>
-                </div>
-
             </div>
         </div>
     </section>
@@ -195,7 +175,19 @@
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 1</h2>
                         <div class="result d-flex justify-content-center">
-                            
+                            <?php
+                            $age = 19;
+                            // is_string va permettre de s'assurer qu'il s'agit d'une valeur numérique
+                            if (is_string($age)) {
+                                $result =  'Veuillez entrer un âge valide';
+                            } elseif ($age >= 18) {
+                                $result =  'Vous êtes majeur !';
+                            } else {
+                                $result =  'Vous êtes mineur !';
+                            }
+                            ?>
+
+                            <?= $result; ?>
                         </div>
                     </article>
                 </div>
@@ -207,7 +199,20 @@
                         <h2 class="text-center py-3 mb-4">Exercice 2</h2>
 
                         <div class="result d-flex justify-content-center">
-                            
+                            <?php
+                            $isEasy = true;
+                            if ($isEasy == true) {
+                                $msg = 'C\'est facile !!';
+                            } else {
+                                $msg = 'C\'est difficile !!!';
+                            }
+
+                            // Condition ternaire
+                            $msg2 = ($isEasy == true) ? 'C\'est facile !!' : 'C\'est difficile !!!';
+                            ?>
+
+                            <?= $msg ?><br>
+                            <?= $msg2 ?>
                         </div>
                     </article>
                 </div>
@@ -219,7 +224,32 @@
                         <h2 class="text-center py-3 mb-4">Exercice 3</h2>
 
                         <div class="result d-flex justify-content-center">
-                            
+                            <?php
+                            $age = 20;
+                            $gender = 'Homme';
+
+                            //vérification âge valide
+                            if ($age > 0) {
+                                //vérification des conditions
+                                if ($gender == 'Femme' && $age < 18) {
+                                    $msg = 'Vous êtes une femme et vous êtes mineure.';
+                                } elseif ($gender == 'Femme' && $age >= 18) {
+                                    $msg = 'Vous êtes une femme et vous êtes majeure.';
+                                } elseif ($gender == 'Homme' && $age < 18) {
+                                    $msg = 'Vous êtes un homme et vous êtes mineur.';
+                                } elseif ($gender == 'Homme' && $age >= 18) {
+                                    $msg = 'Vous êtes un homme et vous êtes majeur.';
+                                } else {
+                                    //affichage d'un msg d'erreur
+                                    $msg = 'Vous n\'êtes pas humain !';
+                                }
+                            } else {
+                                //affichage d'un msg d'erreur
+                                $msg = 'L\'âge n\'est pas valide';
+                            }
+                            ?>
+
+                            <?= $msg ?>
                         </div>
                     </article>
                 </div>
@@ -231,7 +261,51 @@
                         <h2 class="text-center py-3 mb-4">Exercice 4</h2>
 
                         <div class="result d-flex justify-content-center">
-                            
+                            <?php
+                            $magnitude = 5;
+                            switch ($magnitude) {
+                                case 1:
+                                    $msg = 'Micro-séisme impossible à ressentir.';
+                                    break;
+
+                                case 2:
+                                    $msg = 'Micro-séisme impossible à ressentir mais enregistrable par les sismomètres.';
+                                    break;
+
+                                case 3:
+                                    $msg = 'Ne cause pas de dégats mais commence à pouvoir être légèrement ressenti.';
+                                    break;
+
+                                case 4:
+                                    $msg = 'Séisme capable de faire bouger des objets mais ne causant généralement pas de dégats.';
+                                    break;
+
+                                case 5:
+                                    $msg = 'Séisme capable d\'engendrer des dégats importants sur de vieux bâtiments ou bien des bâtiments présentants des défauts de construction. Peu de dégats sur des bâtiments modernes.';
+                                    break;
+
+                                case 6:
+                                    $msg = 'Fort séisme capable d\'engendrer des destructions majeures sur une large distance (180 km) autour de l\'épicentre.';
+                                    break;
+
+                                case 7:
+                                    $msg = 'Séisme capable de destructions majeures à modérées sur une très large zone en fonction de la distance.';
+                                    break;
+
+                                case 8:
+                                    $msg = 'Séisme capable de destructions majeures sur une très large zone de plusieurs centaines de kilomètres.';
+                                    break;
+
+                                case 9:
+                                    $msg = 'Séisme capable de tout détruire sur une très vaste zone.';
+                                    break;
+
+                                default:
+                                    $msg = 'On va tous mourir !';
+                            }
+                            ?>
+
+                            <?= $msg ?>
                         </div>
                     </article>
                 </div>
@@ -243,7 +317,14 @@
                         <h2 class="text-center py-3 mb-4">Exercice 5</h2>
 
                         <div class="result d-flex justify-content-center">
-                            
+                            <?php
+                            $gender = 'Homme';
+                            if ($gender != 'Homme') {
+                                echo 'C\'est une développeuse !!!';
+                            } else {
+                                echo 'C\'est un développeur !!!';
+                            }
+                            ?>
                         </div>
                     </article>
                 </div>
@@ -255,7 +336,14 @@
                         <h2 class="text-center py-3 mb-4">Exercice 6</h2>
 
                         <div class="result d-flex justify-content-center">
-                            
+                            <?php
+                            $age = 25;
+                            if ($age >= 18) {
+                                echo 'Tu es majeur';
+                            } else {
+                                echo 'Tu n\'es pas majeur';
+                            }
+                            ?>
                         </div>
                     </article>
                 </div>
@@ -267,19 +355,14 @@
                         <h2 class="text-center py-3 mb-4">Exercice 7</h2>
 
                         <div class="result d-flex justify-content-center">
-                            
-                        </div>
-                    </article>
-                </div>
-
-                <!-- =============================================================================================================== -->
-                <!-- Exercice 8 -->
-                <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg mx-md-3 mx-xxl-5 my-2 my-md-5">
-                    <article class="py-3 px-1 py-md-4 px-md-4">
-                        <h2 class="text-center py-3 mb-4">Exercice 8</h2>
-
-                        <div class="result d-flex flex-column align-items-center">
-                            
+                            <?php
+                            $isOk = false;
+                            if ($isOk == false) {
+                                echo 'C\'est pas bon !!!';
+                            } else {
+                                echo 'C\'est ok !!';
+                            }
+                            ?>
                         </div>
                     </article>
                 </div>

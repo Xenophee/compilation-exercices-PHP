@@ -20,7 +20,7 @@
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <dialog><img src="../../public/assets/img/fondamentaux/conditions/1.png" class="img-fluid" alt="Code de l'exercice 1"></dialog>
+                            <dialog><img src="../../public/assets/img/fondamentaux/boucles/1.png" class="img-fluid" alt="Code de l'exercice 1"></dialog>
                             <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
                                 code</button>
                         </div>
@@ -43,7 +43,7 @@
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <dialog><img src="../../public/assets/img/fondamentaux/conditions/2.png" class="img-fluid" alt="Code de l'exercice 2"></dialog>
+                            <dialog><img src="../../public/assets/img/fondamentaux/boucles/2.png" class="img-fluid" alt="Code de l'exercice 2"></dialog>
                             <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
                                 code</button>
                         </div>
@@ -66,7 +66,7 @@
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <dialog><img src="../../public/assets/img/fondamentaux/conditions/3.png" class="img-fluid" alt="Code de l'exercice 3"></dialog>
+                            <dialog><img src="../../public/assets/img/fondamentaux/boucles/3.png" class="img-fluid" alt="Code de l'exercice 3"></dialog>
                             <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
                                 code</button>
                         </div>
@@ -86,7 +86,7 @@
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <dialog><img src="../../public/assets/img/fondamentaux/conditions/4.png" class="img-fluid" alt="Code de l'exercice 4"></dialog>
+                            <dialog><img src="../../public/assets/img/fondamentaux/boucles/4.png" class="img-fluid" alt="Code de l'exercice 4"></dialog>
                             <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
                                 code</button>
                         </div>
@@ -105,7 +105,7 @@
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <dialog><img src="../../public/assets/img/fondamentaux/conditions/5.png" class="img-fluid" alt="Code de l'exercice 5"></dialog>
+                            <dialog><img src="../../public/assets/img/fondamentaux/boucles/5.png" class="img-fluid" alt="Code de l'exercice 5"></dialog>
                             <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
                                 code</button>
                         </div>
@@ -124,7 +124,7 @@
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <dialog><img src="../../public/assets/img/fondamentaux/conditions/6.png" class="img-fluid" alt="Code de l'exercice 6"></dialog>
+                            <dialog><img src="../../public/assets/img/fondamentaux/boucles/6.png" class="img-fluid" alt="Code de l'exercice 6"></dialog>
                             <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
                                 code</button>
                         </div>
@@ -143,7 +143,7 @@
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <dialog><img src="../../public/assets/img/fondamentaux/conditions/7.png" class="img-fluid" alt="Code de l'exercice 7"></dialog>
+                            <dialog><img src="../../public/assets/img/fondamentaux/boucles/7.png" class="img-fluid" alt="Code de l'exercice 7"></dialog>
                             <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
                                 code</button>
                         </div>
@@ -162,7 +162,7 @@
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <dialog><img src="../../public/assets/img/fondamentaux/conditions/8.png" class="img-fluid" alt="Code de l'exercice 8"></dialog>
+                            <dialog><img src="../../public/assets/img/fondamentaux/boucles/8.png" class="img-fluid" alt="Code de l'exercice 8"></dialog>
                             <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
                                 code</button>
                         </div>
@@ -195,7 +195,21 @@
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 1</h2>
                         <div class="result d-flex justify-content-center">
+                            <?php
+                            $number = 0;
+                            while ($number < 10) {
+                                echo $number . '<br>';
+                                $number++;
+                            }
+                            ?>
 
+                            <?php
+                            // Quand on a un point de départ, une condition et un pas on peut utiliser une boucle for
+                            // La boucle for est plus courte que while
+                            for ($number = 0; $number < 10; $number++) {
+                                echo $number . '<br>';
+                            }
+                            ?>
                         </div>
                     </article>
                 </div>
@@ -207,7 +221,20 @@
                         <h2 class="text-center py-3 mb-4">Exercice 2</h2>
 
                         <div class="result d-flex justify-content-center">
+                            <?php
+                            $number1 = 0;
+                            $number2 = rand(0, 100);
 
+                            while ($number1 < 20) {
+                                $result = $number1 * $number2;
+                                echo $result . ' ';
+                                $number1++;
+                            }
+
+                            for ($number1 = 0; $number1 < 20; $number1++) {
+                                echo $number1 * $number2 . ' ';
+                            }
+                            ?>
                         </div>
                     </article>
                 </div>
@@ -219,7 +246,20 @@
                         <h2 class="text-center py-3 mb-4">Exercice 3</h2>
 
                         <div class="result d-flex justify-content-center">
+                            <?php
+                            $firstNumber = 100;
+                            $secondNumber = rand(1, 100);
 
+                            while ($firstNumber >= 10) {
+                                $result = $firstNumber * $secondNumber;
+                                echo $result . ' ';
+                                $firstNumber--;
+                            }
+
+                            for ($firstNumber = 100; $firstNumber >= 10; $firstNumber--) {
+                                echo $firstNumber * $secondNumber . ' ';
+                            }
+                            ?>
                         </div>
                     </article>
                 </div>
@@ -231,7 +271,18 @@
                         <h2 class="text-center py-3 mb-4">Exercice 4</h2>
 
                         <div class="result d-flex justify-content-center">
+                            <?php
+                            $number = 1;
 
+                            while ($number <= 10) {
+                                echo $number . ' - ';
+                                $number += $number / 2;
+                            }
+
+                            for ($number = 1; $number <= 10; $number += $number / 2) {
+                                echo $number . ' - ';
+                            }
+                            ?>
                         </div>
                     </article>
                 </div>
@@ -243,7 +294,18 @@
                         <h2 class="text-center py-3 mb-4">Exercice 5</h2>
 
                         <div class="result d-flex justify-content-center">
+                            <?php
+                            $number = 1;
 
+                            while ($number <= 15) {
+                                echo 'On y arrive presque.<br>';
+                                $number++;
+                            }
+
+                            for ($number = 1; $number <= 15; $number++) {
+                                echo 'On y arrive presque.<br>';
+                            }
+                            ?>
                         </div>
                     </article>
                 </div>
@@ -255,7 +317,18 @@
                         <h2 class="text-center py-3 mb-4">Exercice 6</h2>
 
                         <div class="result d-flex justify-content-center">
+                            <?php
+                            $number = 20;
 
+                            while ($number > 0) {
+                                echo 'C\'est presque bon.<br>';
+                                $number--;
+                            }
+
+                            for ($number = 20; $number > 0; $number--) {
+                                echo 'C\'est presque bon.<br>';
+                            }
+                            ?>
                         </div>
                     </article>
                 </div>
@@ -267,7 +340,18 @@
                         <h2 class="text-center py-3 mb-4">Exercice 7</h2>
 
                         <div class="result d-flex justify-content-center">
+                            <?php
+                            $number = 1;
 
+                            while ($number <= 100) {
+                                echo 'On tient le bon bout.<br>';
+                                $number += 15;
+                            }
+
+                            for ($number = 1; $number <= 100; $number += 15) {
+                                echo 'On tient le bon bout.<br>';
+                            }
+                            ?>
                         </div>
                     </article>
                 </div>
@@ -279,6 +363,18 @@
                         <h2 class="text-center py-3 mb-4">Exercice 8</h2>
 
                         <div class="result d-flex flex-column align-items-center">
+                            <?php
+                            $number = 200;
+
+                            while ($number > 0) {
+                                echo 'Enfin !!!!<br>';
+                                $number -= 12;
+                            }
+
+                            for ($number = 200; $number > 0; $number -= 12) {
+                                echo 'Enfin !!!!<br>';
+                            }
+                            ?>
 
                         </div>
                     </article>

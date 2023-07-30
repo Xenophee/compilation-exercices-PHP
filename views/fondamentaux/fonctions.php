@@ -113,8 +113,9 @@
 
                         <div class="text">
                             <ul>
-                                <li class="mb-2">Faire une fonction qui prend trois paramètres : le nom, le prénom et l'âge d'une personne. Elle doit renvoyer une chaine de la forme :  <br> <br> 
-                                    <em>Bonjour + nom + prénom + , tu as + age + ans.</em></li>
+                                <li class="mb-2">Faire une fonction qui prend trois paramètres : le nom, le prénom et l'âge d'une personne. Elle doit renvoyer une chaine de la forme : <br> <br>
+                                    <em>Bonjour + nom + prénom + , tu as + age + ans.</em>
+                                </li>
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
@@ -192,7 +193,12 @@
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 1</h2>
                         <div class="result d-flex justify-content-center">
-
+                            <?php
+                            function returnTrue() {
+                                return true;
+                            }
+                            ?>
+                            <p class="result-text">La fonction retourne : <?= returnTrue(); ?></p>
                         </div>
                     </article>
                 </div>
@@ -204,7 +210,19 @@
                         <h2 class="text-center py-3 mb-4">Exercice 2</h2>
 
                         <div class="result d-flex justify-content-center">
+                            <?php
+                            function returnString($string) {
+                                return $string;
+                            }
 
+                            var_dump(returnString(3));
+                            echo '<br>';
+                            var_dump(returnString('32'));
+                            echo '<br>';
+                            var_dump(returnString(true));
+                            echo '<br>';
+                            var_dump(returnString(array('1', '2')));
+                            ?>
                         </div>
                     </article>
                 </div>
@@ -216,7 +234,12 @@
                         <h2 class="text-center py-3 mb-4">Exercice 3</h2>
 
                         <div class="result d-flex justify-content-center">
-
+                            <?php
+                            function returnString2($string1, $string2) {
+                                return $string1 . ' ' . $string2;
+                            }
+                            ?>
+                            <p class="result-text">La fonction retourne : <?= returnString2('Bonjour', 'Adibou') ?></p>
                         </div>
                     </article>
                 </div>
@@ -228,7 +251,21 @@
                         <h2 class="text-center py-3 mb-4">Exercice 4</h2>
 
                         <div class="result d-flex justify-content-center">
+                            <?php
 
+                            function returnNumber($number1, $number2) {
+                                if ($number1 > $number2) {
+                                    $message = 'Le premier nombre est plus grand';
+                                } elseif ($number1 < $number2) {
+                                    $message = 'Le premier nombre est plus petit';
+                                } else {
+                                    $message = 'Les deux nombres sont identiques';
+                                }
+                                return $message;
+                            }
+                            ?>
+
+                            <p class="result-text"><?= returnNumber(8, 5); ?></p>
                         </div>
                     </article>
                 </div>
@@ -240,7 +277,13 @@
                         <h2 class="text-center py-3 mb-4">Exercice 5</h2>
 
                         <div class="result d-flex justify-content-center">
+                            <?php
+                            function returnConcatenation($number, $string) {
+                                return $number . ' ' . $string;
+                            }
+                            ?>
 
+                            <p class="result-text">J'aimerais bien manger <?= returnConcatenation(5, 'tartiflettes'); ?></p>
                         </div>
                     </article>
                 </div>
@@ -252,7 +295,13 @@
                         <h2 class="text-center py-3 mb-4">Exercice 6</h2>
 
                         <div class="result d-flex justify-content-center">
+                            <?php
+                            function returnSentence($lastname, $firstname, $age) {
+                                return 'Bonjour ' . $lastname . ' ' . $firstname . ', tu as ' . $age . ' ans.';
+                            }
+                            ?>
 
+                            <p class="result-text"><?= returnSentence('Sauvageons', 'Kévin', 15); ?></p>
                         </div>
                     </article>
                 </div>
@@ -264,7 +313,34 @@
                         <h2 class="text-center py-3 mb-4">Exercice 7</h2>
 
                         <div class="result d-flex justify-content-center">
+                            <?php
+                            function ageAndGender($gender, $age) {
+                                $gender = strtolower($gender);
+                                if ($age > 0) {
+                                    if ($gender == 'homme' || $gender == 'femme') {
+                                        //condition comparant le genre et l'âge
+                                        if ($gender == 'homme' && $age >= 18) {
+                                            $message = 'Vous êtes un homme et vous êtes majeur';
+                                        } elseif ($gender == 'homme' && $age < 18) {
+                                            $message = 'Vous êtes un homme et vous êtes mineur';
+                                        } elseif ($gender == 'femme' && $age >= 18) {
+                                            $message = 'Vous êtes une femme et vous êtes majeure';
+                                        } elseif ($gender == 'femme' && $age < 18) {
+                                            $message = 'Vous êtes une femme et vous êtes mineure';
+                                        } else {
+                                            $message = 'Vous n\'êtes pas humain';
+                                        }
+                                    } else {
+                                        $message = 'Vous êtes non-binaire';
+                                    }
+                                } else {
+                                    $message = 'Entrez un âge valide';
+                                }
+                                return $message;
+                            }
+                            ?>
 
+                            <p class="result-text"><?= ageAndGender('femme', '19'); ?></p>
                         </div>
                     </article>
                 </div>
@@ -276,7 +352,13 @@
                         <h2 class="text-center py-3 mb-4">Exercice 8</h2>
 
                         <div class="result d-flex flex-column align-items-center">
+                            <?php
+                            function sum($number1 = 15, $number2 = 85, $number3 = 6) {
+                                return $number1 + $number2 + $number3;
+                            }
+                            ?>
 
+                            <p class="result-text">La somme de 3 chiffres est égale à : <?= sum(5, 8, 2); ?></p>
                         </div>
                     </article>
                 </div>
