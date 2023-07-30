@@ -5,7 +5,7 @@
     <!-- PARTIE ÉNONCÉES -->
     <section>
         <div class="container-fluid main-container shadow-lg py-3 py-md-5 px-md-5 mb-5">
-            <h1 class="text-center shadow py-3 mb-5">Les boucles</h1>
+            <h1 class="text-center shadow py-3 mb-5">Les fonctions</h1>
 
             <div class="row justify-content-around pt-md-5">
                 <!-- =============================================================================================================== -->

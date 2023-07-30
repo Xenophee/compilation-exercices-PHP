@@ -159,7 +159,7 @@
                                 <li class="mb-2">Créer 3 variables.</li>
                                 <li class="mb-2">Dans la première mettre le résultat de l'opération 3 + 4.</li>
                                 <li class="mb-2">Dans la deuxième mettre le résultat de l'opération 5 * 20.</li>
-                                <li class="mb-2">Dans la troisième mettre le résultat de l'opération 45 / 5..</li>
+                                <li class="mb-2">Dans la troisième mettre le résultat de l'opération 45 / 5.</li>
                                 <li class="mb-2">Afficher le contenu des variables.</li>
                             </ul>
                         </div>
