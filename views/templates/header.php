@@ -29,7 +29,7 @@
                             <a class="nav-link fs-5 <?= isActivePage(1, $currentPage) ?>" href="../../controllers/form_controller.php">Formulaire</a>
                         </li>
                         <li class="nav-item mx-5">
-                            <a class="nav-link disabled fs-5 <?= isActivePage(2, $currentPage) ?>" href="">Calendrier</a>
+                            <a class="nav-link fs-5 <?= isActivePage(2, $currentPage) ?>" href="../../controllers/calendar_controller.php">Calendrier</a>
                         </li>
                         <li class="nav-item mx-5">
                             <a class="nav-link disabled fs-5 <?= isActivePage(3, $currentPage) ?>" href="">BDD</a>
