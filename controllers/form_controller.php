@@ -13,6 +13,8 @@ try {
     $document = 'Formulaire';
     $currentPage = 1;
 
+    $js = '../../public/assets/js/script.js';
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // ================================================================================================================================

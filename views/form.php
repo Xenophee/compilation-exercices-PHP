@@ -28,12 +28,28 @@
                                 <li class="mb-2">Un champ pour raconter une expérience avec la programmation.</li>
                             </ul>
                         </div>
-                        <div class="d-flex justify-content-center">
-                            <dialog><img src="../public/assets/img/" class="img-fluid" alt="Code de "></dialog>
-                            <button type="button" class="btn showCode d-block shadow px-5 py-2 mt-3">Voir le
-                                code</button>
-                        </div>
+
                     </article>
+                </div>
+            </div>
+
+            <div class="row pt-md-4">
+            <h2 class="text-center">Voir le code</h2>
+                <div class="col d-flex flex-wrap justify-content-around showCodeDiv py-4">
+            
+                    <dialog><img src="" class="img-fluid modal-img" alt="Code du formulaire"></dialog>
+
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Adresse mail</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Mot de passe</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Photo de profil</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Nom</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Date de naissance</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Pays de naissance</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Code postal</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Lien Linkedin</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Niveau d'étude</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Langages connus</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Expérience</button>
                 </div>
             </div>
         </div>
