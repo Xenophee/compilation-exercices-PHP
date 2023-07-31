@@ -1,0 +1,48 @@
+/* On utilise le principe de grid CSS pour créer une grille pour le calendrier*/
+#calendar {
+    background-color: var(--first-color);
+    height: 55vh;
+    margin: auto;
+    border: var(--fourth-border-solid);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1.5fr 1.3fr;
+    grid-auto-rows: 1fr;
+    overflow: hidden;
+}
+
+.previous, .next, .monthYear {
+    background-color: var(--third-color);
+    font-size: 2.5rem;
+    color: var(--first-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Principe grid permettant de définir sur quelles parties de la grille s'étend cette div */
+.monthYear {
+    grid-column-start: 2;
+    grid-column-end: 7;
+}
+
+#month, #year {
+    width: 25%;
+}
+
+.dayOfWeek {
+    background-color: var(--fourth-color);
+    color: var(--first-color);
+    font-weight: bold;
+}
+
+.day {
+    color: var(--second-color);
+    border: var(--fourth-border-thin-solid);
+    font-weight: bold;
+}
+
+.currentDay {
+    background-color: var(--second-color);
+    color: var(--first-color);
+}
