@@ -15,3 +15,8 @@
     color: var(--first-color);
     border: var(--first-border-solid);
 }
+
+.showCodeDiv {
+    border-top: var(--first-border-solid);
+    border-bottom: var(--first-border-solid);
+}
