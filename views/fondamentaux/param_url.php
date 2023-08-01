@@ -16,7 +16,7 @@
                         <div class="text">
                             <ul>
                                 <li class="mb-2">Faire une nouvelle page php.</li>
-                                <li class="mb-2">Tester sur cette page que tous les paramètres de cette URL existent et les afficher : index.php?lastname=Nemare&firstname=Jean</li>
+                                <li class="mb-2">Tester sur cette page que tous les paramètres de cette URL existent et les afficher : index.php?lastname=Nemare<br>&firstname=Jean</li>
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
@@ -36,7 +36,7 @@
                         <div class="text">
                             <ul>
                                 <li class="mb-2">Faire une nouvelle page php.</li>
-                                <li class="mb-2">Tester sur cette page que le paramètre age existe et si c'est le cas l'afficher sinon le signaler : index.php?lastname=Nemare&firstname=Jean</li>
+                                <li class="mb-2">Tester sur cette page que le paramètre age existe et si c'est le cas l'afficher sinon le signaler : index.php?lastname=Nemare<br>&firstname=Jean</li>
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
@@ -56,7 +56,7 @@
                         <div class="text">
                             <ul>
                                 <li class="mb-2">Faire une nouvelle page php.</li>
-                                <li class="mb-2">Tester sur cette page que tous les paramètres de cette URL existent  et les afficher : index.php?startDate=2/05/2016&endDate=27/11/2016</li>
+                                <li class="mb-2">Tester sur cette page que tous les paramètres de cette URL existent et les afficher : index.php?startDate=2/05/2016<br>&endDate=27/11/2016</li>
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
@@ -76,7 +76,7 @@
                         <div class="text">
                             <ul>
                                 <li class="mb-2">Faire une nouvelle page php.</li>
-                                <li class="mb-2">Tester sur cette page que tous les paramètres de cette URL existent  et les afficher : index.php?language=PHP&server=LAMP</li>
+                                <li class="mb-2">Tester sur cette page que tous les paramètres de cette URL existent et les afficher : index.php?language=PHP&server=LAMP</li>
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
@@ -96,7 +96,7 @@
                         <div class="text">
                             <ul>
                                 <li class="mb-2">Faire une nouvelle page php.</li>
-                                <li class="mb-2">Tester sur cette page que tous les paramètres de cette URL existent  et les afficher : index.php?week=12</li>
+                                <li class="mb-2">Tester sur cette page que tous les paramètres de cette URL existent et les afficher : index.php?week=12</li>
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
@@ -116,7 +116,7 @@
                         <div class="text">
                             <ul>
                                 <li class="mb-2">Faire une nouvelle page php.</li>
-                                <li class="mb-2">Faire une page index.php. Tester sur cette page que tous les paramètres de cette URL existent  et les afficher : index.php?building=12&room=101</li>
+                                <li class="mb-2">Faire une page index.php. Tester sur cette page que tous les paramètres de cette URL existent et les afficher : index.php?building=12&room=101</li>
                             </ul>
                         </div>
                         <div class="d-flex justify-content-center">
@@ -153,7 +153,19 @@
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 1</h2>
                         <div class="result d-flex flex-column align-items-center">
+                            <?php
+                            // isset vérifie uniquement l'existence du paramètre
+                            // empty vérifie l'existence du paramètre et s'il est vide
+                            // $_GET = variable superglobale (C'est un tableau associatif)
 
+                            if (!empty($_GET['lastname']) && !empty($_GET['firstname'])) {
+                                $result = 'Les paramètres d\'url sont : ' . $_GET['lastname'] . ' ' . $_GET['firstname'];
+                            } else {
+                                $result = 'Pas de paramètres.';
+                            }
+                            ?>
+
+                            <?= $result ?>
                         </div>
                     </article>
                 </div>
@@ -165,7 +177,15 @@
                         <h2 class="text-center py-3 mb-4">Exercice 2</h2>
 
                         <div class="result d-flex flex-column align-items-center">
+                            <?php
+                            if (!empty($_GET['age'])) {
+                                $result = 'Paramètre "age" : ' . $_GET['age'];
+                            } else {
+                                $result = 'Il n\'y a pas de paramètre âge.';
+                            }
+                            ?>
 
+                            <?= $result ?>
                         </div>
                     </article>
                 </div>
@@ -177,7 +197,15 @@
                         <h2 class="text-center py-3 mb-4">Exercice 3</h2>
 
                         <div class="result d-flex flex-column justify-content-center">
+                            <?php
+                            if (!empty($_GET['startDate']) && !empty($_GET['endDate'])) {
+                                $result = $_GET['startDate'] . ' et ' . $_GET['endDate'];
+                            } else {
+                                $result = 'Il manque un ou plusieurs paramètres !';
+                            }
+                            ?>
 
+                            <?= $result ?>
                         </div>
                     </article>
                 </div>
@@ -189,7 +217,30 @@
                         <h2 class="text-center py-3 mb-4">Exercice 4</h2>
 
                         <div class="result">
+                            <?php
+                            //vérification de l'existence du paramètre "language"
+                            if (!empty($_GET['language'])) {
+                                $language = $_GET['language'] . ' ';
+                            } else {
+                                $errorLanguage = 'Il manque le paramètre language.';
+                            }
 
+                            //vérification de l'existence du paramètre "server"
+                            if (!empty($_GET['server'])) {
+                                $server = $_GET['server'];
+                            } else {
+                                $errorServer = 'Il manque le paramètre server.';
+                            }
+                            ?>
+
+                            <!-- Ceci est une coalescente : Si errorLanguage n'est pas défini, alors, on affiche ce qu'il y a après les "??" -->
+                            <?= $errorLanguage ?? ''; ?>
+                            <br>
+                            <?= $errorServer ?? ''; ?>
+                            <br>
+                            <?= $language ?? ''; ?>
+                            <br>
+                            <?= $server ?? ''; ?>
                         </div>
                     </article>
                 </div>
@@ -201,7 +252,24 @@
                         <h2 class="text-center py-3 mb-4">Exercice 5</h2>
 
                         <div class="result">
+                            <?php
+                            if (!empty($_GET['week'])) {
+                                $week = $_GET['week'];
+                            } else {
+                                $errorWeek = 'Erreur, le paramètre d\'url n\'existe pas !';
+                            }
+                            ?>
 
+                            <!-- Ceci est une coalescente : Si week n'est pas défini, alors, on affiche ce qu'il y a après les "??" -->
+                            <?= $week ?? $errorWeek; ?>
+
+                            <br>
+
+                            <!-- On peut aussi passer par une variable intermédiaire : -->
+                            <?php
+                            $result = $week ?? $errorWeek;
+                            echo $result;
+                            ?>
                         </div>
                     </article>
                 </div>
@@ -213,7 +281,16 @@
                         <h2 class="text-center py-3 mb-4">Exercice 6</h2>
 
                         <div class="result">
-
+                            <?php
+                            if (!empty($_GET['building']) && !empty($_GET['room'])) {
+                                $building = $_GET['building'] . ' ';
+                                $room = $_GET['room'] . ' ';
+                            } else {
+                                $error = 'Il manque au moins un paramètre : room ou building.';
+                            }
+                            ?>
+                            
+                            <?= $error ?? 'Building: ' . $building . '<br>Chambre: ' . $room; ?>
                         </div>
                     </article>
                 </div>
