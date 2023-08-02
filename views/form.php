@@ -15,6 +15,7 @@
                     <article class="d-flex flex-column justify-content-between py-3 px-1 py-md-4 px-md-4">
                         <div class="text">
                             <p class="mb-5">Faire une page avec un formulaire pour enregistrer un futur apprenant, nettoyer les données reçues de l'utilisateur et afficher un récapitulatif.</p>
+                            <p class="mt-5 mb-4">Le formulaire doit contenir :</p>
                             <ul>
                                 <li class="mb-2">Un champ pour le nom.</li>
                                 <li class="mb-2">Un champ pour l'adresse mail.</li>
@@ -27,6 +28,16 @@
                                 <li class="mb-2">Un champ pour les langages connus.</li>
                                 <li class="mb-2">Un champ pour raconter une expérience avec la programmation.</li>
                             </ul>
+                            <p class="mt-5 mb-4">Des constantes ont été défini pour cet exercice, pour :</p>
+                            <ul>
+                                <li class="mb-2">Contenir la regex du nom : REGEX_NAME</li>
+                                <li class="mb-2">Contenir la regex du code postal : REGEX_ZIPCODE</li>
+                                <li class="mb-2">Contenir la regex du lien linkedin : REGEX_LINKEDIN</li>
+                                <li class="mb-2">Les formats d'image autorisés : AUTHORIZED_IMAGE_FORMAT</li>
+                                <li class="mb-2">L'affichage des pays dans le select : COUNTRIES</li>
+                                <li class="mb-2">L'affichage des checkbox des langages connus : LANGUAGES</li>
+                                <li class="mb-2">L'affichage des boutons radios des niveaux d'études : LEVEL_OF_STUDIES</li>
+                            </ul>
                         </div>
 
                     </article>
@@ -34,10 +45,16 @@
             </div>
 
             <div class="row pt-md-4">
-            <h2 class="text-center">Voir le code</h2>
+                <h2 class="text-center">Voir le code</h2>
                 <div class="col d-flex flex-wrap justify-content-around showCodeDiv py-4">
-            
-                    <dialog><img src="" class="img-fluid modal-img" alt="Code du formulaire"></dialog>
+
+                    <dialog>
+                        <h2 class="text-center my-4">Code HTML</h2>
+                        <img src="" class="img-fluid modal-img html-img" alt="Code HTML du formulaire">
+                        <hr>
+                        <h2 class="text-center my-4">Code PHP</h2>
+                        <img src="" class="img-fluid modal-img php-img" alt="Code PHP du formulaire">
+                    </dialog>
 
                     <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Adresse mail</button>
                     <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Mot de passe</button>
