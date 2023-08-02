@@ -15,7 +15,7 @@ try {
 
     $js = '../../public/assets/js/script.js';
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
         // ================================================================================================================================
         // §§ PREMIER BLOC SUR LES INFORMATIONS DE CONNEXION §§
