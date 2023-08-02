@@ -14,7 +14,7 @@
                 <div class="col-12 col-md-10 col-xl-8 col-xxl-6 exo mx-md-3 mx-xxl-5 my-2 my-md-5">
                     <article class="d-flex flex-column justify-content-between py-3 px-1 py-md-4 px-md-4">
                         <div class="text">
-                            <p class="mb-5">Coder un calendrier en PHP. Pour réussir l'exercice, il faut récupérer :</p>
+                            <p class="mb-4">Coder un calendrier en PHP. Pour réussir l'exercice, il faut récupérer :</p>
                             <ul>
                                 <li class="mb-2">Tous les mois de l'année.</li>
                                 <li class="mb-2">Le nombre de jour dans un mois.</li>
@@ -22,6 +22,7 @@
                                 <li class="mb-2">Le dernier jour du mois.</li>
                                 <li class="mb-2">La date du jour.</li>
                             </ul>
+                            <p>Conseil : réaliser le calendrier en brut d'abord avant d'essayer de le rendre dynamique. Préférer le grid css plutôt que de faire un tableau.</p>
                         </div>
 
                     </article>
@@ -34,9 +35,14 @@
 
                     <dialog><img src="" class="img-fluid modal-img" alt="Code du formulaire"></dialog>
 
-                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">A venir</button>
-                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">A venir</button>
-                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">A venir</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Préparation de la logique</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Premières cases vides</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Cases avec les jours</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Dernières cases vides</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Options du select mois</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Options du select années</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Liens avant / après</button>
+                    <button type="button" class="btn showCode shadow px-5 py-2 my-2 mx-2">Script JavaScript</button>
                 </div>
             </div>
         </div>
@@ -105,7 +111,8 @@
                         // Création des div contenant les jours du mois
                         for ($i = 1; $i <= $nbDaysOfMonth; $i++) {
 
-                            $currentDate = date('Y-m-d', mktime(0, 0, 0, $month, $i, $year)); //'2023-01-01';
+                            // Récupération de la date à chaque fois pour la comparer à la date du jour après, sous le format '2023-01-01'
+                            $currentDate = date('Y-m-d', mktime(0, 0, 0, $month, $i, $year));
 
                             // Condition pour savoir si il faut mettre en surbrillance le jour ou pas
                             $currentDay = ($currentDate == $today) ? 'currentDay' : ''; ?>
@@ -123,22 +130,5 @@
             </div>
         </div>
     </section>
-
-
-
-    <!-- ==================================================================================================================================== -->
-    <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
-    <!-- PARTIE AFFICHAGE DU CALENDRIER -->
-
-    <!-- <section>
-        <div class="container-fluid main-container shadow-lg py-3 py-md-5 px-md-5 mb-5">
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-10">
-
-                </div>
-            </div>
-        </div>
-    </section> -->
-
 
 </main>

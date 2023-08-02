@@ -24,9 +24,9 @@ try {
     $months = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
 
     // Initialisation des valeurs des différentes variables nécessaires dans le HTML
-    $firstDayOfMonth = date('N', strtotime("$year-$month-01")); //Ex: 7 pour dimanche;
-    $nbDaysOfMonth = cal_days_in_month(CAL_GREGORIAN, $month, -1); //autre solution : date('t', strtotime('2023-01-01')); //Ex: 31;
-    $lastDayOfMonth = date('N', strtotime("$year-$month-$nbDaysOfMonth")); //Ex: 2 pour mardi;
+    $firstDayOfMonth = date('N', strtotime("$year-$month-01")); // Ex: 7 pour dimanche;
+    $nbDaysOfMonth = cal_days_in_month(CAL_GREGORIAN, $month, -1); // Autre solution : date('t', strtotime('2023-01-01')); // Ex: 31;
+    $lastDayOfMonth = date('N', strtotime("$year-$month-$nbDaysOfMonth")); // Ex: 2 pour mardi;
 
     // Préparation des variables pour les liens vers les mois et années précédents/suivants
     $previousMonth = ($month == 1) ? 12 : $month - 1;
@@ -34,7 +34,7 @@ try {
     $nextMonth = ($month == 12) ? 1 : $month + 1;
     $nextYear = ($month == 12) ? $year + 1 : $year;
 
-    // Initialisation d'une variable contenant la date du jour (pour mettre en surbrillance la date du jour dans le calendrier)
+    // Initialisation d'une variable contenant la date du jour (pour mettre classe à la date du jour dans le calendrier)
     $today = date('Y-m-d');
 
 } catch (\Throwable $th) {
