@@ -1,3 +1,37 @@
+<?php
+
+// EXERCICE 2
+// ========================================================================================================
+// --------------------------------------------------------------------------------------------------------
+// Démarrage de la session OBLIGATOIRE
+session_start();
+
+// Définition des variables
+$_SESSION['lastname'] = 'du Village';
+$_SESSION['firstname'] = 'Neuneux';
+$_SESSION['age'] = 45;
+// --------------------------------------------------------------------------------------------------------
+// ========================================================================================================
+
+
+// EXERCICE 3
+// ========================================================================================================
+// --------------------------------------------------------------------------------------------------------
+// Vérification de l'existence des 2 paramètres. Dans ce cas, on écrit les cookies.
+if (!empty($_POST['login']) && !empty($_POST['password'])) {
+    // Création des cookie login et password qui expirent dans un an
+    // Le dernier paramètre correspond à la portabilité des cookies. 
+    // Sans le / le cookie n'est valide que dans le dossier et les sous-dossiers ou il a été déclaré.
+    setcookie('login', $_POST['login'], (time() + 365 * 24 * 3600), '/');
+    setcookie('password', $_POST['password'], (time() + 365 * 24 * 3600), '/');
+}
+// --------------------------------------------------------------------------------------------------------
+// ========================================================================================================
+?>
+
+
+
+
 <main>
 
     <!-- ==================================================================================================================================== -->
@@ -135,7 +169,10 @@
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 1</h2>
                         <div class="result d-flex flex-column align-items-center">
-
+                            <!-- $_SERVER est une superglobale : un tableau qui permet de voir toutes les clés server accessible sur ce serveur web -->
+                            <p class="result-text"><?= $_SERVER['HTTP_USER_AGENT'] ?></p> <br>
+                            <p class="result-text"><?= $_SERVER['REMOTE_ADDR'] ?></p> <br>
+                            <p class="result-text"><?= $_SERVER['SERVER_NAME'] ?></p> <br>
                         </div>
                     </article>
                 </div>
@@ -144,10 +181,12 @@
                 <!-- Exercice 2 -->
                 <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg mx-md-3 mx-xxl-5 my-2 my-md-5">
                     <article class="py-3 px-1 py-md-4 px-md-4">
-                        <h2 class="text-center py-3 mb-4">Exercice 2</h2>
+                        <h2 class="text-center py-3 mb-4">Exercice 2, 4 & 5</h2>
 
                         <div class="result d-flex flex-column align-items-center">
-
+                            <div class="d-flex justify-content-center">
+                                <a href="../../controllers/superglobales_controller.php" class="btn shadow px-5 py-2 mt-3">Voir de l'autre côté</a>
+                            </div>
                         </div>
                     </article>
                 </div>
@@ -160,30 +199,13 @@
 
                         <div class="result d-flex flex-column justify-content-center">
 
-                        </div>
-                    </article>
-                </div>
-
-                <!-- =============================================================================================================== -->
-                <!-- Exercice 4 -->
-                <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg mx-md-3 mx-xxl-5 my-2 my-md-5">
-                    <article class="py-3 px-1 py-md-4 px-md-4">
-                        <h2 class="text-center py-3 mb-4">Exercice 4</h2>
-
-                        <div class="result">
-
-                        </div>
-                    </article>
-                </div>
-
-                <!-- =============================================================================================================== -->
-                <!-- Exercice 5 -->
-                <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg mx-md-3 mx-xxl-5 my-2 my-md-5">
-                    <article class="py-3 px-1 py-md-4 px-md-4">
-                        <h2 class="text-center py-3 mb-4">Exercice 5</h2>
-
-                        <div class="result">
-
+                            <form method="POST">
+                                <input type="text" name="login" placeholder="Login" class="mb-3 form-control">
+                                <input type="text" name="password" placeholder="Password" class="mb-3 form-control">
+                                <div class="d-flex justify-content-center">
+                                    <input type="submit" name="submit" value="Valider" class="btn shadow mt-4">
+                                </div>
+                            </form>
                         </div>
                     </article>
                 </div>

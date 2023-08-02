@@ -92,13 +92,13 @@
                         <h2 class="text-center py-3 mb-4">Exercice 5</h2>
 
                         <div class="text">
-                            <p>Créer un formulaire sur la page index.php avec :</p>
+                            <p>Créer un formulaire sur une page php avec :</p>
                             <ul>
                                 <li class="mb-2">Une liste déroulante pour la civilité (Mr ou Mme).</li>
                                 <li class="mb-2">Un champ texte pour le nom.</li>
                                 <li class="mb-2">Un champ texte pour le prénom.</li>
                             </ul>
-                            <p>Ce formulaire doit rediriger vers la page index.php. Vous avez le choix de la méthode.</p>
+                            <p>Ce formulaire doit rediriger vers la même page. Vous avez le choix de la méthode.</p>
                         </div>
                         <div class="d-flex justify-content-center">
                             <dialog><img src="../../public/assets/img/fondamentaux/forms/5.png" class="img-fluid" alt="Code de l'exercice 5"></dialog>
@@ -193,8 +193,14 @@
                 <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg mx-md-3 mx-xxl-5 my-2 my-md-5">
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 1</h2>
-                        <div class="result d-flex flex-column align-items-center">
-
+                        <div class="result">
+                            <form action="../../controllers/user_controller.php" method="GET">
+                                <input type="text" name="lastname" placeholder="Nom" class="mb-3 form-control">
+                                <input type="text" name="firstname" placeholder="Prénom" class="mb-3 form-control">
+                                <div class="d-flex justify-content-center">
+                                    <input type="submit" name="submit" value="Valider" class="btn shadow px-4 mt-4">
+                                </div>
+                            </form>
                         </div>
                     </article>
                 </div>
@@ -205,32 +211,14 @@
                     <article class="py-3 px-1 py-md-4 px-md-4">
                         <h2 class="text-center py-3 mb-4">Exercice 2</h2>
 
-                        <div class="result d-flex flex-column align-items-center">
-
-                        </div>
-                    </article>
-                </div>
-
-                <!-- =============================================================================================================== -->
-                <!-- Exercice 3 -->
-                <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg mx-md-3 mx-xxl-5 my-2 my-md-5">
-                    <article class="py-3 px-1 py-md-4 px-md-4">
-                        <h2 class="text-center py-3 mb-4">Exercice 3</h2>
-
-                        <div class="result d-flex flex-column justify-content-center">
-
-                        </div>
-                    </article>
-                </div>
-
-                <!-- =============================================================================================================== -->
-                <!-- Exercice 4 -->
-                <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg mx-md-3 mx-xxl-5 my-2 my-md-5">
-                    <article class="py-3 px-1 py-md-4 px-md-4">
-                        <h2 class="text-center py-3 mb-4">Exercice 4</h2>
-
                         <div class="result">
-
+                            <form action="../../controllers/user_controller.php" method="POST">
+                                <input type="text" name="lastname" placeholder="Nom" class="mb-3 form-control">
+                                <input type="text" name="firstname" placeholder="Prénom" class="mb-3 form-control">
+                                <div class="d-flex justify-content-center">
+                                    <input type="submit" name="submit" value="Valider" class="btn shadow px-4 mt-4">
+                                </div>
+                            </form>
                         </div>
                     </article>
                 </div>
@@ -239,46 +227,37 @@
                 <!-- Exercice 5 -->
                 <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg mx-md-3 mx-xxl-5 my-2 my-md-5">
                     <article class="py-3 px-1 py-md-4 px-md-4">
-                        <h2 class="text-center py-3 mb-4">Exercice 5</h2>
+                        <h2 class="text-center py-3 mb-4">Exercice 5, 6, 7, 8</h2>
 
                         <div class="result">
+                            <?php
+                            if ($_SERVER['REQUEST_METHOD'] != 'POST') { ?>
+                                <form method="POST" enctype="multipart/form-data">
 
-                        </div>
-                    </article>
-                </div>
+                                    <select class="form-select mb-3" name="civility">
+                                        <option>Mme</option>
+                                        <option>M</option>
+                                    </select>
 
-                <!-- =============================================================================================================== -->
-                <!-- Exercice 6 -->
-                <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg mx-md-3 mx-xxl-5 my-2 my-md-5">
-                    <article class="py-3 px-1 py-md-4 px-md-4">
-                        <h2 class="text-center py-3 mb-4">Exercice 6</h2>
+                                    <input name="lastname" class="form-control mb-3" type="text" placeholder="Nom">
+                                    <input name="firstname" class="form-control mb-3" type="text" placeholder="Prénom">
+                                    <input class="form-control mb-3" type="file" name="specialFile">
 
-                        <div class="result">
+                                    <div class="d-flex justify-content-center">
+                                        <input type="submit" class="btn shadow px-4 mt-4" value="Envoyer">
+                                    </div>
 
-                        </div>
-                    </article>
-                </div>
-
-                <!-- =============================================================================================================== -->
-                <!-- Exercice 7 -->
-                <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg mx-md-3 mx-xxl-5 my-2 my-md-5">
-                    <article class="py-3 px-1 py-md-4 px-md-4">
-                        <h2 class="text-center py-3 mb-4">Exercice 7</h2>
-
-                        <div class="result">
-
-                        </div>
-                    </article>
-                </div>
-
-                <!-- =============================================================================================================== -->
-                <!-- Exercice 8 -->
-                <div class="col-12 col-md-10 col-xl-5 col-xxl-3 result-exo shadow-lg mx-md-3 mx-xxl-5 my-2 my-md-5">
-                    <article class="py-3 px-1 py-md-4 px-md-4">
-                        <h2 class="text-center py-3 mb-4">Exercice 8</h2>
-
-                        <div class="result">
-
+                                </form>
+                            <?php } else {
+                                $typeMime = $_FILES['specialFile']['type'];
+                                $extension = ($typeMime != 'application/pdf') ? 'Le format du fichier n\'est pas un pdf !' : 'Le format du fichier est un pdf.'; ?>
+                                <p class="result-text">
+                                    Bonjour <?= $_POST['civility'] ?> <?= $_POST['lastname'] ?> <?= $_POST['firstname'] ?>. Comment allez-vous ?<br><br>
+                                    Vous avez transféré le fichier : <?= $_FILES['specialFile']['name'] ?><br><br>
+                                    L'extension du fichier est : <?= pathinfo($_FILES['specialFile']['name'], PATHINFO_EXTENSION); ?><br><br>
+                                    <?= $extension ?>
+                                </p>
+                            <?php } ?>
                         </div>
                     </article>
                 </div>
