@@ -13,6 +13,11 @@
     width: 90%;
 }
 
+.before-exo {
+    background-color: var(--third-color);
+    border: var(--first-border-solid);
+}
+
 .exo {
     background-color: var(--second-color);
     border: var(--first-border-strong-solid);
