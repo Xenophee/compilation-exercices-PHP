@@ -1,6 +1,7 @@
 
 const btn = document.querySelectorAll('.showCode');
-const modalImg = document.querySelectorAll('.modal-img');
+const modalHtml = document.querySelector('.html-img');
+const modalPhp = document.querySelector('.php-img');
 const modal = document.querySelector('dialog');
 
 
@@ -8,13 +9,8 @@ btn.forEach((element, key) => {
     element.addEventListener('click', () => {
         modal.showModal();
 
-        modalImg.forEach((element, key) => {
-            if (key === 0) {
-                element.src = `../public/assets/img/form/html/${key + 1}.png`;
-            } else {
-                element.src = `../public/assets/img/form/php/${key + 1}.png`;
-            }
-        });
+        modalHtml.src = `../public/assets/img/form/html/${key + 1}.png`;
+        modalPhp.src = `../public/assets/img/form/php/${key + 1}.png`;
     });
 });
 
